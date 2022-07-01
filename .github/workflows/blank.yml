@@ -27,7 +27,7 @@ jobs:
       - name: validate if our value is the same as our secret
         env:
           SECRET_STRING : ${{ secrets.SECRET_STRING }}
-        run: 
+        run: | 
           if [ ${SECRET_STRING} == "12345" ]
             then 
               echo "the secret (${SECRET_STRING}) has been validated"
